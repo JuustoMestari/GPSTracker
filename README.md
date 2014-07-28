@@ -15,7 +15,8 @@ At line **42** change _SS_MAX_RX_BUFF to 256 : `#define _SS_MAX_RX_BUFF 256 `
 #### NeoPixel
 
 Please use the library in this repo. It has been modified to use Analog Port as well (Leds are connected to Analog 5)
-If you want to make the modification yourself, replace **PORTB** by **PORTC** between line **238** & **315** in Adafruit_NeoPixel.cpp (You won't be able to use the library with ports 8 to 13 tho...)
+If you want to make the modification yourself, replace all **PORTB** by **PORTC**  in Adafruit_NeoPixel.cpp (You won't be able to use the library with ports 8 to 13 tho...)
+* Make a backup of the original file and use the modified version only to compile for this project !
 
 [See here for port manipulation](http://www.arduino.cc/en/Reference/PortManipulation)
 

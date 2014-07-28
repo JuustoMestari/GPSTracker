@@ -235,13 +235,13 @@ void Adafruit_NeoPixel::show(void) {
         [hi]     "r" (hi),
         [lo]     "r" (lo));
 
-    } else if(port == &PORTB) {
+    } else if(port == &PORTC) {
 
 #endif // PORTD
 
-      // Same as above, just switched to PORTB and stripped of comments.
-      hi = PORTB |  pinMask;
-      lo = PORTB & ~pinMask;
+      // Same as above, just switched to PORTC and stripped of comments.
+      hi = PORTC |  pinMask;
+      lo = PORTC & ~pinMask;
       n1 = lo;
       if(b & 0x80) n1 = hi;
 
@@ -312,11 +312,11 @@ void Adafruit_NeoPixel::show(void) {
         "out  %[port] , %[lo]"    "\n\t"
         "brne headB"              "\n"
       : [byte] "+r" (b), [n1] "+r" (n1), [n2] "+r" (n2), [count] "+w" (i)
-      : [port] "I" (_SFR_IO_ADDR(PORTB)), [ptr] "e" (ptr), [hi] "r" (hi),
+      : [port] "I" (_SFR_IO_ADDR(PORTC)), [ptr] "e" (ptr), [hi] "r" (hi),
         [lo] "r" (lo));
 
 #ifdef PORTD
-    }    // endif PORTB
+    }    // endif PORTC
 #endif
 
 #ifdef NEO_KHZ400

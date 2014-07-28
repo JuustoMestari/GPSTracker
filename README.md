@@ -12,6 +12,13 @@ Arduino Pro mini 3.3V 8Mhz ( copy )
 In order to run the code properly, you need to modify **SoftwareSerial.h** (Arduino\libraries\SoftwareSerial) before compiling.
 At line **42** change _SS_MAX_RX_BUFF to 256 : `#define _SS_MAX_RX_BUFF 256 `
 
+#### NeoPixel
+
+Please use the library in this repo. It has been modified to use Analog Port as well.
+If you want to make the modification yourself, replace **PORTB** by **PORTC** between line **238** & **315** in Adafruit_NeoPixel.cpp (You won't be able to use the library with ports 8 to 13 tho...)
+
+[See here for port manipulation](http://www.arduino.cc/en/Reference/PortManipulation)
+
 ## Hardware
 
 ### TP4056

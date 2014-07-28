@@ -20,7 +20,7 @@ At line **42** change _SS_MAX_RX_BUFF to 256 : `#define _SS_MAX_RX_BUFF 256 `
 * RED LED ON -> **Loading**
 * GREEN LED ON -> **Loaded**
 
-The module in this project use a mini USB connector but micro USB versions are available on eBay.
+The module in this project uses a mini USB connector but micro USB versions are available on eBay.
 
 [Module test](http://lygte-info.dk/review/Review%20Charger%20TP4056%20UK.html)
 
